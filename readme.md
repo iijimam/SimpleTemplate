@@ -56,7 +56,7 @@ $ docker-compose down
 
 ディレクトリは変更可能です。変更された場合は、[Installer.cls](./Installer.cls)の **17行目** と、[iris.script](./iris.script)の **3行目**、**12行目** のディレクトリ指定も変更してください。
 
-[Dokerfile](./Dockerfile)の **18行目** は、IRISへログインしています（iris session IRIS）。
+[Dokerfile](./Dockerfile)の **19行目** は、IRISへログインしています（iris session IRIS）。
 ログインと同時に、[iris.script](./iris.script) に記載されたコマンドを入力しています。
 
 
@@ -106,7 +106,7 @@ IRIS初回アクセス時に初期パスワードを変更したい場合は、�
 
 ## [Installer.cls](./Installer.cls)で実行している内容
 
-[Dokerfile](./Dockerfile)の **6行目** で作成したディレクトリ以下にTRYデータベースを作成し、TRYネームスペースから参照するように定義しています。
+[Dokerfile](./Dockerfile)の **7行目** で作成したディレクトリ以下にTRYデータベースを作成し、TRYネームスペースから参照するように定義しています。
 
 また、TRYネームスペースのデフォルトウェブアプリケーションパス（/csp/try）も設定しています。
 
