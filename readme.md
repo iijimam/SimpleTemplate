@@ -54,7 +54,7 @@ $ docker-compose down
 
 また、TRYネームスペースが参照する、TRYデータベースの物理パスのルートとして利用しています。
 
-ディレクトリは変更可能です。変更された場合は、[Installer.cls](./Installer.cls)の17行目と、[iris.script](./iris.script)の **3行目**、**12行目** のディレクトリ指定も変更してください。
+ディレクトリは変更可能です。変更された場合は、[Installer.cls](./Installer.cls)の **17行目** と、[iris.script](./iris.script)の **3行目**、**12行目** のディレクトリ指定も変更してください。
 
 [Dokerfile](./Dockerfile)の **18行目** は、IRISへログインしています（iris session IRIS）。
 ログインと同時に、[iris.script](./iris.script) に記載されたコマンドを入力しています。
