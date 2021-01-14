@@ -65,32 +65,42 @@ ObjectScriptのコマンドが記載されているファイルです。
 [Dokerfile](./Dockerfile)の中で /opt/try　以下にコピーされたファイルを利用して初期設定を行っています。
 
 (1)　do $SYSTEM.OBJ.Load("/opt/try/Installer.cls", "ck")
+
 [Installer.cls](./Installer.cls)をIRISログイン時のデフォルトネームスペース＝USERにインポートしています。
 
-(2)　set sc = ##class(App.Installer).setup() 
+(2)　set sc = ##class(App.Installer).setup()
+
 (1)でインポートしたインストーラーを実行しています。この実行でTRYネームスペース／TRYデータベースが作成されます。
 
+
 (3)　ソースコードのインポート
+
 set $namespace="TRY"　で作成したTRYネームスペースに移動し、
 
 do $System.OBJ.LoadDir("/opt/try/src","ck",,1)　で ./src以下にあるファイルをインポートしています。
 （他のバージョン、InterSystems製品からエクスポートしてきたXMLファイルを配置してもインポートされます）。
+
 
 (4)　システム設定の変更
 事前定義ユーザ（_systemやSuperUserなど）の初期パスワードの期限を無効に設定しています。
 通常、コンテナ版IRISの初回アクセス時に、パスワードを任意設定できるようにパスワード変更画面が開きます。
 
 このテンプレートでは、デフォルトパスワードのSYSで起動できるように設定しています。
+
 IRIS初回アクセス時に初期パスワードを変更したい場合は、以下の実行をコメント化（スラッシュ2つ //）してください。
+ 
     //Do ##class(Security.Users).UnExpireUserPasswords("*")
 
 日本語ロケールへの変更を行っています。コンテナ版IRISは英語Ubuntuで起動するため、デフォルトでは英語ロケールで立ち上がります。
+
 日本語が含まれるファイル入出力などを試す場合は、日本語のロケールに変更いただく必要があります。
+
     Do ##class(Config.NLS.Locales).Install("jpuw")
 
 
 ## [Installer.cls](./Installer.cls)で実行している内容
 [Dokerfile](./Dockerfile)の6行目で作成したディレクトリ以下にTRYデータベースを作成し、TRYネームスペースから参照するように定義しています。
+
 また、TRYネームスペースのデフォルトウェブアプリケーションパス（/csp/try）も設定しています。
 
 ネームスペース名、データベース名を任意に変更する場合は、8行目と10行目を変更してください。
