@@ -8,7 +8,7 @@
 
 |種類|ファイル|説明|
 |:--|:--|:--|
-|接続設定|[settings.json](/.vscode/settings.json)|VSCodeからIRISへ接続するときの設定用ファイル|
+|接続設定|[settings.json](/.vscode/settings.json)|VSCodeからIRISへ接続するときの設定用ファイル　記述方法詳細は開発者コミュニティの記事 [VSCodeを使ってみよう！](https://jp.community.intersystems.com/node/482976/japanese) をご参照ください。|
 |ソースコードサンプル|[Person.cls](/src/Test/Person.cls)|コンテナビルド時にIRISにインポートするサンプルクラス定義|
 |インストーラー|[Installer.cls](./Installer.cls)|コンテナビルド時に初期設定用定義が記載されているインストーラークラス|
 |スクリプト|[iris.script](./iris.script)|コンテナビルド時に実行したいコマンドを記載したファイル（IRISログインに使用する irisコマンドに入力したいObjectScriptのコマンドを記述しています）|
