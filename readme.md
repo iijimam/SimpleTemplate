@@ -105,6 +105,7 @@ IRIS初回アクセス時に初期パスワードを変更したい場合は、�
 
 
 ## [Installer.cls](./Installer.cls)で実行している内容
+
 [Dokerfile](./Dockerfile)の6行目で作成したディレクトリ以下にTRYデータベースを作成し、TRYネームスペースから参照するように定義しています。
 
 また、TRYネームスペースのデフォルトウェブアプリケーションパス（/csp/try）も設定しています。
@@ -114,3 +115,4 @@ IRIS初回アクセス時に初期パスワードを変更したい場合は、�
 
 慣習として、ネームスペース名、データベース名、ネームスペースのデフォルトウェブアプリケーションパスは、名称を統一（例：TRY）する事が多いため、例では統一しています。
 
+インストーラーについて詳細は、ドキュメントの [インストール・マニフェストの作成および使用](https://docs.intersystems.com/irislatestj/csp/docbook/DocBook.UI.Page.cls?KEY=GCI_manifest) や、開発者コミュニティの記事 [%InstallerでInterSystems Cachéにアプリケーションをデプロイする](https://jp.community.intersystems.com/node/478966/japanese) もご参照ください。
