@@ -1,0 +1,20 @@
+// インストーラーの実行（ネームスペースTRYの作成のみ）
+// コンテナ内で実行するので、Installer.clsを配布したコンテナ内のディレクトリを指定します。
+do $SYSTEM.OBJ.Load("/opt/try/Installer.cls", "ck")
+// インストーラーの実行
+set sc = ##class(App.Installer).setup() 
+
+//　作成したネームスペースに移動
+set $namespace="TRY"
+// アプリケーション用ソースなどあればここで一括インポートできます。
+// 例では、ObjectScriptパッケージマネージャのクライアントツールをインポート
+// (ObjectScriptパッケージマネージャはどのネームスペースでもインポートできます)
+do $System.OBJ.LoadDir("/opt/try/src","ck",,1)
+
+// システムの設定を変更するため、%SYSネームスペースに移動します
+set $namespace="%SYS"
+// 事前定義ユーザのパスワードを無期限に設定する（デフォルトパスワードはSYS）
+Do ##class(Security.Users).UnExpireUserPasswords("*")
+// 日本語ロケールに変更（コンテナがUbuntu英語版のためデフォルトは英語ロケール）を利用
+Do ##class(Config.NLS.Locales).Install("jpuw")
+halt

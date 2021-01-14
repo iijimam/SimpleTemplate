@@ -1,0 +1,17 @@
+{
+    "objectscript.conn": {
+        "ns": "TRY",
+        "server": "tryiris",
+        "active": true
+    },
+    "intersystems.servers": {
+        "tryiris": {
+            "webServer": {
+                "scheme": "http",
+                "host":"localhost",
+                "port": 52773
+            },
+            "username": "_system"
+        },
+    }
+}
