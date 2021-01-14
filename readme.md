@@ -118,7 +118,7 @@ IRIS初回アクセス時に初期パスワードを変更したい場合は、�
 インストーラーについて詳細は、ドキュメントの [インストール・マニフェストの作成および使用](https://docs.intersystems.com/irislatestj/csp/docbook/DocBook.UI.Page.cls?KEY=GCI_manifest) や、開発者コミュニティの記事 [%InstallerでInterSystems Cachéにアプリケーションをデプロイする](https://jp.community.intersystems.com/node/478966/japanese) もご参照ください。
 
 
-## [Person.cls](/src/Test/Person.cls)
+## [Test.Person.cls](/src/Test/Person.cls)
 Test.Personクラス（またはテーブル）としてTRYネームスペースにインポートされます。
 
 データを自動生成する場合は、IRISログイン後以下実行するか
