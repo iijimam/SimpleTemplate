@@ -6,7 +6,7 @@
 
 ## Gitに含まれるファイルについて
 
-|種別|ファイル|説明|
+|種類|ファイル|説明|
 |:--|:--|:--|
 |接続設定|[settings.json](/.vscode/settings.json)|VSCodeからIRISへ接続するときの設定用ファイル|
 |ソースコードサンプル|[Person.cls](/src/Test/Person.cls)|コンテナビルド時にIRISにインポートするサンプルクラス定義|
@@ -46,6 +46,7 @@ $ docker-compose down
 ```
 
 
+
 ## [Dokerfile](./Dockerfile)で実行している内容
 コンテナビルド時の処理が記載されています。
 
@@ -64,16 +65,16 @@ ObjectScriptのコマンドが記載されているファイルです。
 
 [Dokerfile](./Dockerfile)の中で /opt/try　以下にコピーされたファイルを利用して初期設定を行っています。
 
-(1)　do $SYSTEM.OBJ.Load("/opt/try/Installer.cls", "ck")
+### (1)　do $SYSTEM.OBJ.Load("/opt/try/Installer.cls", "ck")
 
 [Installer.cls](./Installer.cls)をIRISログイン時のデフォルトネームスペース＝USERにインポートしています。
 
-(2)　set sc = ##class(App.Installer).setup()
+### (2)　set sc = ##class(App.Installer).setup()
 
 (1)でインポートしたインストーラーを実行しています。この実行でTRYネームスペース／TRYデータベースが作成されます。
 
 
-(3)　ソースコードのインポート
+### (3)　ソースコードのインポート
 
 set $namespace="TRY"　で作成したTRYネームスペースに移動し、
 
@@ -81,7 +82,7 @@ do $System.OBJ.LoadDir("/opt/try/src","ck",,1)　で ./src以下にあるファ�
 （他のバージョン、InterSystems製品からエクスポートしてきたXMLファイルを配置してもインポートされます）。
 
 
-(4)　システム設定の変更
+### (4)　システム設定の変更
 事前定義ユーザ（_systemやSuperUserなど）の初期パスワードの期限を無効に設定しています。
 通常、コンテナ版IRISの初回アクセス時に、パスワードを任意設定できるようにパスワード変更画面が開きます。
 
@@ -96,6 +97,7 @@ IRIS初回アクセス時に初期パスワードを変更したい場合は、�
 日本語が含まれるファイル入出力などを試す場合は、日本語のロケールに変更いただく必要があります。
 
     Do ##class(Config.NLS.Locales).Install("jpuw")
+
 
 
 ## [Installer.cls](./Installer.cls)で実行している内容
