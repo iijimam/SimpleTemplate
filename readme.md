@@ -130,3 +130,6 @@ do ##class(Test.Person).CreateData(10) //10件作成
 ```
 call Test.Person_CreateData(10)
 ```
+VSCodeでのクラス定義の作成やルーチン作成方法については、開発者コミュニティの記事 [VSCodeを使ってみよう！](https://jp.community.intersystems.com/node/482976/japanese) をご参照ください。
+
+IRISの開発環境の準備やクラス定義やオブジェクト操作方法については、開発者コミュニティの記事 [【はじめての InterSystems IRIS】セルフラーニングビデオ：基本その2：InterSystems IRIS で開発をはじめよう！](https://jp.community.intersystems.com/node/478601/japanese) や [【はじめての InterSystems IRIS】セルフラーニングビデオ：基本その3：IRIS でクラス定義を作ろう（オブジェクト操作の練習）](https://jp.community.intersystems.com/node/478606/japanese) をぜひご参照ください！
