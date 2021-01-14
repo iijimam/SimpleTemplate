@@ -9,8 +9,7 @@
 |種類|ファイル|説明|
 |:--|:--|:--|
 |接続設定|[settings.json](/.vscode/settings.json)|VSCodeからIRISへ接続するときの設定用ファイル　記述方法詳細は開発者コミュニティの記事 [VSCodeを使ってみよう！](https://jp.community.intersystems.com/node/482976/japanese) をご参照ください。|
-|ソースコードサンプル|[Person.cls](/src/Test/Person.cls)|コンテナビルド時にIRISにインポートするサンプルクラス定義
-
+|ソースコードサンプル|[Person.cls](/src/Test/Person.cls)|コンテナビルド時にIRISにインポートするサンプルクラス定義です。
 データを自動生成する場合は、IRISログイン後以下実行するか
 ```
 set $namespace="TRY"
@@ -19,8 +18,7 @@ do ##class(Test.Person).CreateData(10) //10件作成
 管理ポータル > [システムエクスプローラ] > [SQL] のクエリ実行タブに以下入力しストアドプロシージャを実行します。
 ```
 call Test.Person_CreateData(10)
-```
-|
+```|
 |インストーラー|[Installer.cls](./Installer.cls)|コンテナビルド時に初期設定用定義が記載されているインストーラークラス|
 |スクリプト|[iris.script](./iris.script)|コンテナビルド時に実行したいコマンドを記載したファイル（IRISログインに使用する irisコマンドに入力したいObjectScriptのコマンドを記述しています）|
 
