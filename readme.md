@@ -9,8 +9,7 @@
 |種類|ファイル|説明|
 |:--|:--|:--|
 |接続設定|[settings.json](/.vscode/settings.json)|VSCodeからIRISへ接続するときの設定用ファイル　記述方法詳細は開発者コミュニティの記事 [VSCodeを使ってみよう！](https://jp.community.intersystems.com/node/482976/japanese) をご参照ください。|
-|ソースコードサンプル|[Person.cls](/src/Test/Person.cls)|コンテナビルド時にIRISにインポートするサンプルクラス定義です。
-データを自動生成する場合は、IRISログイン後以下実行するか
+|ソースコードサンプル|[Person.cls](/src/Test/Person.cls)|コンテナビルド時にIRISにインポートするサンプルクラス定義です。データを自動生成する場合は、IRISログイン後以下実行するか
 ```
 set $namespace="TRY"
 do ##class(Test.Person).CreateData(10) //10件作成
