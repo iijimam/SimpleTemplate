@@ -78,8 +78,9 @@ ObjectScriptのコマンドが記載されているファイルです。
 
 set $namespace="TRY"　で作成したTRYネームスペースに移動し、
 
-do $System.OBJ.LoadDir("/opt/try/src","ck",,1)　で ./src以下にあるファイルをインポートしています。
-（他のバージョン、InterSystems製品からエクスポートしてきたXMLファイルを配置してもインポートされます）。
+    do $System.OBJ.LoadDir("/opt/try/src","ck",,1)
+
+で ./src以下にあるファイルをインポートしています（他のバージョン、InterSystems製品からエクスポートしてきたXMLファイルを配置してもインポートされます）。
 
 
 ### (4)　システム設定の変更
