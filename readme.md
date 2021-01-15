@@ -15,7 +15,7 @@
 
 
 ## コンテナ開始後のイメージ図
-[環境イメージ図](/templateimage.png)
+![環境イメージ図](/templateimage.png)
 
 
 ## コンテナ起動までの手順
