@@ -15,8 +15,11 @@
 
 
 ## コンテナ開始後のイメージ図
-開発環境テンプレートのイメージです
-![環境イメージ図](/templateimage1.png)
+
+以下の図は、Docker for windows でコンテナを開始した時のイメージ図です。
+（c:\docker　にいる状態で git clone した時の図です）
+
+![環境イメージ図](/templateimage.png)
 
 
 ## コンテナ起動までの手順
