@@ -14,6 +14,9 @@
 |スクリプト|[iris.script](./iris.script)|コンテナビルド時に実行したいコマンドを記載したファイル（IRISログインに使用する irisコマンドに入力したいObjectScriptのコマンドを記述しています）|
 
 
+## コンテナ開始後のイメージ図
+[環境イメージ図](/templateimage.png)
+
 
 ## コンテナ起動までの手順
 詳細は、[docker-compose.yml](./docker-compose.yml) をご参照ください。
